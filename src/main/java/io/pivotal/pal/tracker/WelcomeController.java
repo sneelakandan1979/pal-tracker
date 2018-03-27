@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeController {
 
-    private String welcomeMessage;
+    private String welcome;
 
     public WelcomeController(
         @Value("${welcome_message}") String welcomeMessage
     ) {
-        this.welcomeMessage = welcomeMessage;
+        this.welcome = welcomeMessage;
     }
 
     @GetMapping("/")
